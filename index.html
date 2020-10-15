@@ -2,6 +2,8 @@
 <html>
 
 <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js"></script>
@@ -31,24 +33,4074 @@
             text-align: right;
         }
     </style>
+
+
+    <style>
+        /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+        body {
+            margin: 0
+        }
+
+        a {
+            background-color: transparent
+        }
+
+        code {
+            font-family: monospace, monospace;
+            font-size: 1em
+        }
+
+        img {
+            border-style: none
+        }
+
+        template {
+            display: none
+        }
+
+        h2, p {
+            margin: 0
+        }
+
+        *, :after, :before {
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            border-width: 0;
+            border-color: #e2e8f0
+        }
+
+        *, :after, :before, img {
+            border-style: solid
+        }
+
+        table {
+            border-collapse: collapse
+        }
+
+        h2 {
+            font-size: inherit;
+            font-weight: inherit
+        }
+
+        a {
+            color: inherit;
+            text-decoration: inherit
+        }
+
+        code {
+            font-family: Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace
+        }
+
+        img {
+            display: block;
+            vertical-align: middle;
+            max-width: 100%;
+            height: auto
+        }
+
+        .container {
+            width: 100%
+        }
+
+        @media (min-width: 640px) {
+            .container {
+                max-width: 640px
+            }
+        }
+
+        @media (min-width: 768px) {
+            .container {
+                max-width: 768px
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .container {
+                max-width: 1024px
+            }
+        }
+
+        @media (min-width: 1280px) {
+            .container {
+                max-width: 1280px
+            }
+        }
+
+        .bg-white {
+            background-color: #fff
+        }
+
+        .bg-gray-100 {
+            background-color: #f7fafc
+        }
+
+        .bg-gray-200 {
+            background-color: #edf2f7
+        }
+
+        .border-gray-200 {
+            border-color: #edf2f7
+        }
+
+        .rounded-lg {
+            border-radius: .5rem
+        }
+
+        .rounded-full {
+            border-radius: 9999px
+        }
+
+        .border-b-2 {
+            border-bottom-width: 2px
+        }
+
+        .border-b {
+            border-bottom-width: 1px
+        }
+
+        .inline-block {
+            display: inline-block
+        }
+
+        .flex {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex
+        }
+
+        .table {
+            display: table
+        }
+
+        .items-center {
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center
+        }
+
+        .flex-shrink-0 {
+            -ms-flex-negative: 0;
+            flex-shrink: 0
+        }
+
+        .font-sans {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji
+        }
+
+        .font-semibold {
+            font-weight: 600
+        }
+
+        .hover\:font-bold:hover {
+            font-weight: 700
+        }
+
+        .h-10 {
+            height: 2.5rem
+        }
+
+        .h-full {
+            height: 100%
+        }
+
+        .leading-tight {
+            line-height: 1.25
+        }
+
+        .leading-normal {
+            line-height: 1.5
+        }
+
+        .mx-auto {
+            margin-left: auto;
+            margin-right: auto
+        }
+
+        .-mx-4 {
+            margin-left: -1rem;
+            margin-right: -1rem
+        }
+
+        .mr-1 {
+            margin-right: .25rem
+        }
+
+        .ml-3 {
+            margin-left: .75rem
+        }
+
+        .ml-auto {
+            margin-left: auto
+        }
+
+        .min-w-full {
+            min-width: 100%
+        }
+
+        .overflow-hidden {
+            overflow: hidden
+        }
+
+        .overflow-x-auto {
+            overflow-x: auto
+        }
+
+        .py-3 {
+            padding-top: .75rem;
+            padding-bottom: .75rem
+        }
+
+        .py-4 {
+            padding-top: 1rem;
+            padding-bottom: 1rem
+        }
+
+        .px-4 {
+            padding-left: 1rem;
+            padding-right: 1rem
+        }
+
+        .py-5 {
+            padding-top: 1.25rem;
+            padding-bottom: 1.25rem
+        }
+
+        .px-5 {
+            padding-left: 1.25rem;
+            padding-right: 1.25rem
+        }
+
+        .py-8 {
+            padding-top: 2rem;
+            padding-bottom: 2rem
+        }
+
+        .shadow {
+            -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .1), 0 1px 2px 0 rgba(0, 0, 0, .06);
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .1), 0 1px 2px 0 rgba(0, 0, 0, .06)
+        }
+
+        .text-left {
+            text-align: left
+        }
+
+        .text-gray-600 {
+            color: #718096
+        }
+
+        .text-gray-700 {
+            color: #4a5568
+        }
+
+        .text-gray-900 {
+            color: #1a202c
+        }
+
+        .hover\:text-blue-500:hover {
+            color: #4299e1
+        }
+
+        .text-xs {
+            font-size: .75rem
+        }
+
+        .text-sm {
+            font-size: .875rem
+        }
+
+        .text-2xl {
+            font-size: 1.5rem
+        }
+
+        .uppercase {
+            text-transform: uppercase
+        }
+
+        .antialiased {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale
+        }
+
+        .tracking-wider {
+            letter-spacing: .05em
+        }
+
+        .whitespace-no-wrap {
+            white-space: nowrap
+        }
+
+        .w-10 {
+            width: 2.5rem
+        }
+
+        .w-full {
+            width: 100%
+        }
+
+        @media (min-width: 640px) {
+            .sm\:-mx-8 {
+                margin-left: -2rem;
+                margin-right: -2rem
+            }
+
+            .sm\:px-8 {
+                padding-left: 2rem;
+                padding-right: 2rem
+            }
+        }
+    </style>
 </head>
 
-<body>
+<body class="antialiased font-sans bg-gray-200" style="">
+
     <h1>Logbench</h1>
 
     <p>Logbench is comparing benchmark results of popular Golang logging libraries.</p>
 
-    <div id="filter-form">
-        <label for="filter">Filter: </label><input id="filter" type="text">
+    <div class="flex" style="margin-bottom: 26px;">
+        <div id="filter-form">
+            <label for="filter">Filter: </label><input id="filter" type="text">
+        </div>
+        <div id="selector-form">
+            <select>
+                <option value="ns/op">ns/op</option>
+                <option value="B/op">B/op</option>
+                <option value="allocs/op">allocs/op</option>
+            </select>
+        </div>
     </div>
-    <div id="selector-form">
-        <select>
-            <option value="ns/op">ns/op</option>
-            <option value="B/op">B/op</option>
-            <option value="allocs/op">allocs/op</option>
-        </select>
-    </div>
+
     <div id="chart"><canvas></canvas></div>
+
+
+
+
+
+    <div class="container mx-auto px-4 sm:px-8">
+
+
+        <div class="py-8">
+            <div>
+                <h2 class="text-2xl font-semibold leading-tight">
+                    关闭行号 不附加字段 格式化输出fmt
+                </h2>
+            </div>
+            <div class="flex items-center text-xs text-gray-700">
+                <div class="mr-1">CallerDisabled/NoWithFields/Formatting</div>
+            </div>
+
+            <div class="-mx-4 sm:-mx-8 px-4 sm:px-8 py-4 overflow-x-auto">
+                <div
+                        class="inline-block min-w-full shadow rounded-lg overflow-hidden"
+                >
+                    <table class="min-w-full leading-normal">
+                        <thead>
+                        <tr>
+                            <th
+                                    class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider"
+                            >
+                                Library
+                            </th>
+
+                            <th
+                                    class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider"
+                            >
+                                Time
+                            </th>
+
+                            <th
+                                    class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider"
+                            >
+                                Bytes Allocated
+                            </th>
+                            <th
+                                    class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider"
+                            >
+                                Objects Allocated
+                            </th>
+                        </tr>
+                        </thead>
+                        <tbody>
+
+                        <tr>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    ZerologStudioFormatJson
+                                </p>
+                            </td>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    1174.56 ns/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    1337.00 B/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    40.00 allocs/op
+                                </p>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    ZapSugarStudioFormatJson
+                                </p>
+                            </td>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    1415.00 ns/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    1338.00 B/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    40.00 allocs/op
+                                </p>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    ZapStudioFormatPlain
+                                </p>
+                            </td>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    1425.44 ns/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    1338.00 B/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    40.00 allocs/op
+                                </p>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    ZapSugarStudioFormatPlain
+                                </p>
+                            </td>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    1426.40 ns/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    1338.00 B/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    40.00 allocs/op
+                                </p>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    ZapStudioFormatJson
+                                </p>
+                            </td>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    1618.70 ns/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    1338.00 B/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    40.00 allocs/op
+                                </p>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    ZerologStudioFormatRaw
+                                </p>
+                            </td>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    3250.88 ns/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    5489.00 B/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    70.00 allocs/op
+                                </p>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    LogrusStudioFormatRaw
+                                </p>
+                            </td>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    3358.62 ns/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    3550.30 B/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    47.00 allocs/op
+                                </p>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    ZerologStudioFormatPlain
+                                </p>
+                            </td>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    3414.10 ns/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    5617.00 B/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    76.00 allocs/op
+                                </p>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    LogrusStudioFormatPlain
+                                </p>
+                            </td>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    3857.50 ns/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    2789.00 B/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    50.00 allocs/op
+                                </p>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    LogrusStudioFormatJson
+                                </p>
+                            </td>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    9023.70 ns/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    2953.00 B/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    64.00 allocs/op
+                                </p>
+                            </td>
+
+                        </tr>
+
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="py-8">
+            <div>
+                <h2 class="text-2xl font-semibold leading-tight">
+                    关闭行号 不附加字段 纯字符串输出
+                </h2>
+            </div>
+            <div class="flex items-center text-xs text-gray-700">
+                <div class="mr-1">CallerDisabled/NoWithFields/Msg</div>
+            </div>
+
+            <div class="-mx-4 sm:-mx-8 px-4 sm:px-8 py-4 overflow-x-auto">
+                <div
+                        class="inline-block min-w-full shadow rounded-lg overflow-hidden"
+                >
+                    <table class="min-w-full leading-normal">
+                        <thead>
+                        <tr>
+                            <th
+                                    class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider"
+                            >
+                                Library
+                            </th>
+
+                            <th
+                                    class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider"
+                            >
+                                Time
+                            </th>
+
+                            <th
+                                    class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider"
+                            >
+                                Bytes Allocated
+                            </th>
+                            <th
+                                    class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider"
+                            >
+                                Objects Allocated
+                            </th>
+                        </tr>
+                        </thead>
+                        <tbody>
+
+                        <tr>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    ZerologStudioFormatJson
+                                </p>
+                            </td>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    69.62 ns/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    0.00 B/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    0.00 allocs/op
+                                </p>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    ZapStudioFormatPlain
+                                </p>
+                            </td>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    103.33 ns/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    0.00 B/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    0.00 allocs/op
+                                </p>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    ZapStudioFormatJson
+                                </p>
+                            </td>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    125.22 ns/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    0.00 B/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    0.00 allocs/op
+                                </p>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    ZapSugarStudioFormatPlain
+                                </p>
+                            </td>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    146.56 ns/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    64.00 B/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    2.00 allocs/op
+                                </p>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    ZapSugarStudioFormatJson
+                                </p>
+                            </td>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    147.60 ns/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    64.00 B/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    2.00 allocs/op
+                                </p>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    LogrusStudioFormatRaw
+                                </p>
+                            </td>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    541.50 ns/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    352.00 B/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    7.00 allocs/op
+                                </p>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    ZerologStudioFormatRaw
+                                </p>
+                            </td>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    1007.11 ns/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    1745.00 B/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    29.00 allocs/op
+                                </p>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    LogrusStudioFormatPlain
+                                </p>
+                            </td>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    1093.11 ns/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    568.00 B/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    11.00 allocs/op
+                                </p>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    ZerologStudioFormatPlain
+                                </p>
+                            </td>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    1181.80 ns/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    1873.00 B/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    35.00 allocs/op
+                                </p>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    LogrusStudioFormatJson
+                                </p>
+                            </td>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    2860.62 ns/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    1193.00 B/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    25.00 allocs/op
+                                </p>
+                            </td>
+
+                        </tr>
+
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="py-8">
+            <div>
+                <h2 class="text-2xl font-semibold leading-tight">
+                    关闭行号 不附加字段 复杂字符串输出
+                </h2>
+            </div>
+            <div class="flex items-center text-xs text-gray-700">
+                <div class="mr-1">CallerDisabled/NoWithFields/MsgComplex</div>
+            </div>
+
+            <div class="-mx-4 sm:-mx-8 px-4 sm:px-8 py-4 overflow-x-auto">
+                <div
+                        class="inline-block min-w-full shadow rounded-lg overflow-hidden"
+                >
+                    <table class="min-w-full leading-normal">
+                        <thead>
+                        <tr>
+                            <th
+                                    class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider"
+                            >
+                                Library
+                            </th>
+
+                            <th
+                                    class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider"
+                            >
+                                Time
+                            </th>
+
+                            <th
+                                    class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider"
+                            >
+                                Bytes Allocated
+                            </th>
+                            <th
+                                    class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider"
+                            >
+                                Objects Allocated
+                            </th>
+                        </tr>
+                        </thead>
+                        <tbody>
+
+                        <tr>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    ZerologStudioFormatJson
+                                </p>
+                            </td>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    80.83 ns/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    0.00 B/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    0.00 allocs/op
+                                </p>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    ZapStudioFormatPlain
+                                </p>
+                            </td>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    125.17 ns/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    0.00 B/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    0.00 allocs/op
+                                </p>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    ZapSugarStudioFormatJson
+                                </p>
+                            </td>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    177.56 ns/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    96.00 B/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    2.00 allocs/op
+                                </p>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    ZapSugarStudioFormatPlain
+                                </p>
+                            </td>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    179.80 ns/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    96.00 B/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    2.00 allocs/op
+                                </p>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    ZapStudioFormatJson
+                                </p>
+                            </td>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    187.33 ns/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    0.00 B/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    0.00 allocs/op
+                                </p>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    LogrusStudioFormatRaw
+                                </p>
+                            </td>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    681.25 ns/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    544.00 B/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    8.00 allocs/op
+                                </p>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    ZerologStudioFormatRaw
+                                </p>
+                            </td>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    1102.50 ns/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    1889.00 B/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    30.00 allocs/op
+                                </p>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    LogrusStudioFormatPlain
+                                </p>
+                            </td>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    1132.50 ns/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    632.00 B/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    11.00 allocs/op
+                                </p>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    ZerologStudioFormatPlain
+                                </p>
+                            </td>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    1288.22 ns/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    2018.00 B/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    36.00 allocs/op
+                                </p>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    LogrusStudioFormatJson
+                                </p>
+                            </td>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    2944.33 ns/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    1225.00 B/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    25.00 allocs/op
+                                </p>
+                            </td>
+
+                        </tr>
+
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="py-8">
+            <div>
+                <h2 class="text-2xl font-semibold leading-tight">
+                    关闭行号 附加字段 格式化输出fmt
+                </h2>
+            </div>
+            <div class="flex items-center text-xs text-gray-700">
+                <div class="mr-1">CallerDisabled/WithFields/Formatting</div>
+            </div>
+
+            <div class="-mx-4 sm:-mx-8 px-4 sm:px-8 py-4 overflow-x-auto">
+                <div
+                        class="inline-block min-w-full shadow rounded-lg overflow-hidden"
+                >
+                    <table class="min-w-full leading-normal">
+                        <thead>
+                        <tr>
+                            <th
+                                    class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider"
+                            >
+                                Library
+                            </th>
+
+                            <th
+                                    class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider"
+                            >
+                                Time
+                            </th>
+
+                            <th
+                                    class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider"
+                            >
+                                Bytes Allocated
+                            </th>
+                            <th
+                                    class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider"
+                            >
+                                Objects Allocated
+                            </th>
+                        </tr>
+                        </thead>
+                        <tbody>
+
+                        <tr>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    ZerologStudioFormatJson
+                                </p>
+                            </td>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    1169.44 ns/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    1337.00 B/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    40.00 allocs/op
+                                </p>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    ZapSugarStudioFormatJson
+                                </p>
+                            </td>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    1407.38 ns/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    1338.00 B/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    40.00 allocs/op
+                                </p>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    ZapStudioFormatPlain
+                                </p>
+                            </td>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    1422.70 ns/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    1338.00 B/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    40.00 allocs/op
+                                </p>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    ZapSugarStudioFormatPlain
+                                </p>
+                            </td>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    1425.33 ns/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    1338.00 B/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    40.00 allocs/op
+                                </p>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    ZapStudioFormatJson
+                                </p>
+                            </td>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    1817.10 ns/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    1338.00 B/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    40.00 allocs/op
+                                </p>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    ZerologStudioFormatRaw
+                                </p>
+                            </td>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    5424.44 ns/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    7579.00 B/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    130.00 allocs/op
+                                </p>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    ZerologStudioFormatPlain
+                                </p>
+                            </td>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    5648.22 ns/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    7833.00 B/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    151.00 allocs/op
+                                </p>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    LogrusStudioFormatRaw
+                                </p>
+                            </td>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    7224.30 ns/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    3309.00 B/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    53.00 allocs/op
+                                </p>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    LogrusStudioFormatPlain
+                                </p>
+                            </td>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    8745.70 ns/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    4166.30 B/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    61.00 allocs/op
+                                </p>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    LogrusStudioFormatJson
+                                </p>
+                            </td>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    11117.90 ns/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    3307.00 B/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    72.00 allocs/op
+                                </p>
+                            </td>
+
+                        </tr>
+
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="py-8">
+            <div>
+                <h2 class="text-2xl font-semibold leading-tight">
+                    关闭行号 附加字段 纯字符串输出
+                </h2>
+            </div>
+            <div class="flex items-center text-xs text-gray-700">
+                <div class="mr-1">CallerDisabled/WithFields/Msg</div>
+            </div>
+
+            <div class="-mx-4 sm:-mx-8 px-4 sm:px-8 py-4 overflow-x-auto">
+                <div
+                        class="inline-block min-w-full shadow rounded-lg overflow-hidden"
+                >
+                    <table class="min-w-full leading-normal">
+                        <thead>
+                        <tr>
+                            <th
+                                    class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider"
+                            >
+                                Library
+                            </th>
+
+                            <th
+                                    class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider"
+                            >
+                                Time
+                            </th>
+
+                            <th
+                                    class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider"
+                            >
+                                Bytes Allocated
+                            </th>
+                            <th
+                                    class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider"
+                            >
+                                Objects Allocated
+                            </th>
+                        </tr>
+                        </thead>
+                        <tbody>
+
+                        <tr>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    ZerologStudioFormatJson
+                                </p>
+                            </td>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    71.81 ns/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    0.00 B/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    0.00 allocs/op
+                                </p>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    ZapStudioFormatPlain
+                                </p>
+                            </td>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    98.97 ns/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    0.00 B/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    0.00 allocs/op
+                                </p>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    ZapStudioFormatJson
+                                </p>
+                            </td>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    123.80 ns/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    0.00 B/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    0.00 allocs/op
+                                </p>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    ZapSugarStudioFormatPlain
+                                </p>
+                            </td>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    149.50 ns/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    64.00 B/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    2.00 allocs/op
+                                </p>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    ZapSugarStudioFormatJson
+                                </p>
+                            </td>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    151.33 ns/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    64.00 B/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    2.00 allocs/op
+                                </p>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    LogrusStudioFormatRaw
+                                </p>
+                            </td>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    1931.00 ns/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    656.00 B/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    13.00 allocs/op
+                                </p>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    LogrusStudioFormatPlain
+                                </p>
+                            </td>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    2853.78 ns/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    1128.00 B/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    21.00 allocs/op
+                                </p>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    ZerologStudioFormatRaw
+                                </p>
+                            </td>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    2977.33 ns/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    3837.00 B/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    89.00 allocs/op
+                                </p>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    ZerologStudioFormatPlain
+                                </p>
+                            </td>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    3203.80 ns/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    4078.00 B/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    110.00 allocs/op
+                                </p>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    LogrusStudioFormatJson
+                                </p>
+                            </td>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    4819.56 ns/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    1546.00 B/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    33.00 allocs/op
+                                </p>
+                            </td>
+
+                        </tr>
+
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="py-8">
+            <div>
+                <h2 class="text-2xl font-semibold leading-tight">
+                    关闭行号 附加字段 复杂字符串输出
+                </h2>
+            </div>
+            <div class="flex items-center text-xs text-gray-700">
+                <div class="mr-1">CallerDisabled/WithFields/MsgComplex</div>
+            </div>
+
+            <div class="-mx-4 sm:-mx-8 px-4 sm:px-8 py-4 overflow-x-auto">
+                <div
+                        class="inline-block min-w-full shadow rounded-lg overflow-hidden"
+                >
+                    <table class="min-w-full leading-normal">
+                        <thead>
+                        <tr>
+                            <th
+                                    class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider"
+                            >
+                                Library
+                            </th>
+
+                            <th
+                                    class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider"
+                            >
+                                Time
+                            </th>
+
+                            <th
+                                    class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider"
+                            >
+                                Bytes Allocated
+                            </th>
+                            <th
+                                    class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider"
+                            >
+                                Objects Allocated
+                            </th>
+                        </tr>
+                        </thead>
+                        <tbody>
+
+                        <tr>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    ZerologStudioFormatJson
+                                </p>
+                            </td>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    82.41 ns/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    0.00 B/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    0.00 allocs/op
+                                </p>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    ZapStudioFormatPlain
+                                </p>
+                            </td>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    111.86 ns/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    0.00 B/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    0.00 allocs/op
+                                </p>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    ZapStudioFormatJson
+                                </p>
+                            </td>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    163.10 ns/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    0.00 B/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    0.00 allocs/op
+                                </p>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    ZapSugarStudioFormatPlain
+                                </p>
+                            </td>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    176.78 ns/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    96.00 B/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    2.00 allocs/op
+                                </p>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    ZapSugarStudioFormatJson
+                                </p>
+                            </td>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    178.00 ns/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    96.00 B/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    2.00 allocs/op
+                                </p>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    LogrusStudioFormatRaw
+                                </p>
+                            </td>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    1918.40 ns/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    688.00 B/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    13.00 allocs/op
+                                </p>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    LogrusStudioFormatPlain
+                                </p>
+                            </td>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    2887.20 ns/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    1161.00 B/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    21.00 allocs/op
+                                </p>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    ZerologStudioFormatRaw
+                                </p>
+                            </td>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    3102.62 ns/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    3982.00 B/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    90.00 allocs/op
+                                </p>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    ZerologStudioFormatPlain
+                                </p>
+                            </td>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    3355.89 ns/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    4222.00 B/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    111.00 allocs/op
+                                </p>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    LogrusStudioFormatJson
+                                </p>
+                            </td>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    4903.67 ns/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    1578.00 B/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    33.00 allocs/op
+                                </p>
+                            </td>
+
+                        </tr>
+
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="py-8">
+            <div>
+                <h2 class="text-2xl font-semibold leading-tight">
+                    开启行号 不附加字段 格式化输出fmt
+                </h2>
+            </div>
+            <div class="flex items-center text-xs text-gray-700">
+                <div class="mr-1">CallerEnabled/NoWithFields/Formatting</div>
+            </div>
+
+            <div class="-mx-4 sm:-mx-8 px-4 sm:px-8 py-4 overflow-x-auto">
+                <div
+                        class="inline-block min-w-full shadow rounded-lg overflow-hidden"
+                >
+                    <table class="min-w-full leading-normal">
+                        <thead>
+                        <tr>
+                            <th
+                                    class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider"
+                            >
+                                Library
+                            </th>
+
+                            <th
+                                    class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider"
+                            >
+                                Time
+                            </th>
+
+                            <th
+                                    class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider"
+                            >
+                                Bytes Allocated
+                            </th>
+                            <th
+                                    class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider"
+                            >
+                                Objects Allocated
+                            </th>
+                        </tr>
+                        </thead>
+                        <tbody>
+
+                        <tr>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    ZerologStudioFormatJson
+                                </p>
+                            </td>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    1403.22 ns/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    1633.00 B/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    43.00 allocs/op
+                                </p>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    ZapStudioFormatPlain
+                                </p>
+                            </td>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    1686.56 ns/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    1588.00 B/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    43.00 allocs/op
+                                </p>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    ZapSugarStudioFormatJson
+                                </p>
+                            </td>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    1696.30 ns/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    1588.00 B/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    43.00 allocs/op
+                                </p>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    ZapSugarStudioFormatPlain
+                                </p>
+                            </td>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    1706.60 ns/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    1588.00 B/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    43.00 allocs/op
+                                </p>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    ZapStudioFormatJson
+                                </p>
+                            </td>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    2259.40 ns/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    1588.00 B/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    43.00 allocs/op
+                                </p>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    ZerologStudioFormatRaw
+                                </p>
+                            </td>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    3722.60 ns/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    5970.00 B/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    79.00 allocs/op
+                                </p>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    ZerologStudioFormatPlain
+                                </p>
+                            </td>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    4110.44 ns/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    6283.00 B/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    87.00 allocs/op
+                                </p>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    LogrusStudioFormatRaw
+                                </p>
+                            </td>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    8454.20 ns/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    4046.40 B/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    50.00 allocs/op
+                                </p>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    LogrusStudioFormatPlain
+                                </p>
+                            </td>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    9263.00 ns/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    3333.50 B/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    55.00 allocs/op
+                                </p>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    LogrusStudioFormatJson
+                                </p>
+                            </td>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    13132.67 ns/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    3819.00 B/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    77.00 allocs/op
+                                </p>
+                            </td>
+
+                        </tr>
+
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="py-8">
+            <div>
+                <h2 class="text-2xl font-semibold leading-tight">
+                    开启行号 不附加字段 纯字符串输出
+                </h2>
+            </div>
+            <div class="flex items-center text-xs text-gray-700">
+                <div class="mr-1">CallerEnabled/NoWithFields/Msg</div>
+            </div>
+
+            <div class="-mx-4 sm:-mx-8 px-4 sm:px-8 py-4 overflow-x-auto">
+                <div
+                        class="inline-block min-w-full shadow rounded-lg overflow-hidden"
+                >
+                    <table class="min-w-full leading-normal">
+                        <thead>
+                        <tr>
+                            <th
+                                    class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider"
+                            >
+                                Library
+                            </th>
+
+                            <th
+                                    class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider"
+                            >
+                                Time
+                            </th>
+
+                            <th
+                                    class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider"
+                            >
+                                Bytes Allocated
+                            </th>
+                            <th
+                                    class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider"
+                            >
+                                Objects Allocated
+                            </th>
+                        </tr>
+                        </thead>
+                        <tbody>
+
+                        <tr>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    ZerologStudioFormatJson
+                                </p>
+                            </td>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    308.20 ns/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    296.00 B/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    3.00 allocs/op
+                                </p>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    ZapStudioFormatPlain
+                                </p>
+                            </td>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    343.62 ns/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    248.00 B/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    3.00 allocs/op
+                                </p>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    ZapStudioFormatJson
+                                </p>
+                            </td>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    364.50 ns/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    248.00 B/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    3.00 allocs/op
+                                </p>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    ZapSugarStudioFormatPlain
+                                </p>
+                            </td>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    415.40 ns/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    312.00 B/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    5.00 allocs/op
+                                </p>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    ZapSugarStudioFormatJson
+                                </p>
+                            </td>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    436.22 ns/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    312.00 B/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    5.00 allocs/op
+                                </p>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    ZerologStudioFormatRaw
+                                </p>
+                            </td>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    1461.50 ns/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    2218.00 B/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    38.00 allocs/op
+                                </p>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    ZerologStudioFormatPlain
+                                </p>
+                            </td>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    1729.78 ns/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    2538.00 B/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    46.00 allocs/op
+                                </p>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    LogrusStudioFormatRaw
+                                </p>
+                            </td>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    2542.12 ns/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    848.00 B/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    10.00 allocs/op
+                                </p>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    LogrusStudioFormatPlain
+                                </p>
+                            </td>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    3378.33 ns/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    1113.00 B/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    16.00 allocs/op
+                                </p>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    LogrusStudioFormatJson
+                                </p>
+                            </td>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    6495.38 ns/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    2059.00 B/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    38.00 allocs/op
+                                </p>
+                            </td>
+
+                        </tr>
+
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="py-8">
+            <div>
+                <h2 class="text-2xl font-semibold leading-tight">
+                    开启行号 不附加字段 复杂字符串输出
+                </h2>
+            </div>
+            <div class="flex items-center text-xs text-gray-700">
+                <div class="mr-1">CallerEnabled/NoWithFields/MsgComplex</div>
+            </div>
+
+            <div class="-mx-4 sm:-mx-8 px-4 sm:px-8 py-4 overflow-x-auto">
+                <div
+                        class="inline-block min-w-full shadow rounded-lg overflow-hidden"
+                >
+                    <table class="min-w-full leading-normal">
+                        <thead>
+                        <tr>
+                            <th
+                                    class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider"
+                            >
+                                Library
+                            </th>
+
+                            <th
+                                    class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider"
+                            >
+                                Time
+                            </th>
+
+                            <th
+                                    class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider"
+                            >
+                                Bytes Allocated
+                            </th>
+                            <th
+                                    class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider"
+                            >
+                                Objects Allocated
+                            </th>
+                        </tr>
+                        </thead>
+                        <tbody>
+
+                        <tr>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    ZerologStudioFormatJson
+                                </p>
+                            </td>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    325.80 ns/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    296.00 B/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    3.00 allocs/op
+                                </p>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    ZapStudioFormatPlain
+                                </p>
+                            </td>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    371.20 ns/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    248.00 B/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    3.00 allocs/op
+                                </p>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    ZapStudioFormatJson
+                                </p>
+                            </td>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    403.00 ns/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    248.00 B/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    3.00 allocs/op
+                                </p>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    ZapSugarStudioFormatJson
+                                </p>
+                            </td>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    447.90 ns/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    344.00 B/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    5.00 allocs/op
+                                </p>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    ZapSugarStudioFormatPlain
+                                </p>
+                            </td>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    448.30 ns/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    344.00 B/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    5.00 allocs/op
+                                </p>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    ZerologStudioFormatRaw
+                                </p>
+                            </td>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    1559.70 ns/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    2362.00 B/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    39.00 allocs/op
+                                </p>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    ZerologStudioFormatPlain
+                                </p>
+                            </td>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    1834.00 ns/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    2682.00 B/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    47.00 allocs/op
+                                </p>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    LogrusStudioFormatRaw
+                                </p>
+                            </td>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    2674.70 ns/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    1040.00 B/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    11.00 allocs/op
+                                </p>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    LogrusStudioFormatPlain
+                                </p>
+                            </td>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    3481.20 ns/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    1177.00 B/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    16.00 allocs/op
+                                </p>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    LogrusStudioFormatJson
+                                </p>
+                            </td>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    6572.38 ns/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    2091.00 B/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    38.00 allocs/op
+                                </p>
+                            </td>
+
+                        </tr>
+
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="py-8">
+            <div>
+                <h2 class="text-2xl font-semibold leading-tight">
+                    开启行号 附加字段 格式化输出fmt
+                </h2>
+            </div>
+            <div class="flex items-center text-xs text-gray-700">
+                <div class="mr-1">CallerEnabled/WithFields/Formatting</div>
+            </div>
+
+            <div class="-mx-4 sm:-mx-8 px-4 sm:px-8 py-4 overflow-x-auto">
+                <div
+                        class="inline-block min-w-full shadow rounded-lg overflow-hidden"
+                >
+                    <table class="min-w-full leading-normal">
+                        <thead>
+                        <tr>
+                            <th
+                                    class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider"
+                            >
+                                Library
+                            </th>
+
+                            <th
+                                    class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider"
+                            >
+                                Time
+                            </th>
+
+                            <th
+                                    class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider"
+                            >
+                                Bytes Allocated
+                            </th>
+                            <th
+                                    class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider"
+                            >
+                                Objects Allocated
+                            </th>
+                        </tr>
+                        </thead>
+                        <tbody>
+
+                        <tr>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    ZerologStudioFormatJson
+                                </p>
+                            </td>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    1609.50 ns/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    1633.00 B/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    43.00 allocs/op
+                                </p>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    ZapSugarStudioFormatJson
+                                </p>
+                            </td>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    1698.00 ns/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    1588.00 B/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    43.00 allocs/op
+                                </p>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    ZapSugarStudioFormatPlain
+                                </p>
+                            </td>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    1724.20 ns/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    1588.00 B/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    43.00 allocs/op
+                                </p>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    ZapStudioFormatPlain
+                                </p>
+                            </td>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    1835.20 ns/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    1588.00 B/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    43.00 allocs/op
+                                </p>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    ZapStudioFormatJson
+                                </p>
+                            </td>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    2348.60 ns/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    1588.00 B/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    43.00 allocs/op
+                                </p>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    ZerologStudioFormatRaw
+                                </p>
+                            </td>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    5899.67 ns/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    8061.00 B/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    139.00 allocs/op
+                                </p>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    ZerologStudioFormatPlain
+                                </p>
+                            </td>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    6418.78 ns/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    8494.00 B/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    162.00 allocs/op
+                                </p>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    LogrusStudioFormatRaw
+                                </p>
+                            </td>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    9870.22 ns/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    3805.00 B/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    56.00 allocs/op
+                                </p>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    LogrusStudioFormatPlain
+                                </p>
+                            </td>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    11160.60 ns/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    4710.40 B/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    66.00 allocs/op
+                                </p>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    LogrusStudioFormatJson
+                                </p>
+                            </td>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    15754.50 ns/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    4771.60 B/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    86.00 allocs/op
+                                </p>
+                            </td>
+
+                        </tr>
+
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="py-8">
+            <div>
+                <h2 class="text-2xl font-semibold leading-tight">
+                    开启行号 附加字段 纯字符串输出
+                </h2>
+            </div>
+            <div class="flex items-center text-xs text-gray-700">
+                <div class="mr-1">CallerEnabled/WithFields/Msg</div>
+            </div>
+
+            <div class="-mx-4 sm:-mx-8 px-4 sm:px-8 py-4 overflow-x-auto">
+                <div
+                        class="inline-block min-w-full shadow rounded-lg overflow-hidden"
+                >
+                    <table class="min-w-full leading-normal">
+                        <thead>
+                        <tr>
+                            <th
+                                    class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider"
+                            >
+                                Library
+                            </th>
+
+                            <th
+                                    class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider"
+                            >
+                                Time
+                            </th>
+
+                            <th
+                                    class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider"
+                            >
+                                Bytes Allocated
+                            </th>
+                            <th
+                                    class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider"
+                            >
+                                Objects Allocated
+                            </th>
+                        </tr>
+                        </thead>
+                        <tbody>
+
+                        <tr>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    ZerologStudioFormatJson
+                                </p>
+                            </td>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    309.78 ns/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    296.00 B/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    3.00 allocs/op
+                                </p>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    ZapStudioFormatPlain
+                                </p>
+                            </td>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    349.00 ns/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    248.00 B/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    3.00 allocs/op
+                                </p>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    ZapStudioFormatJson
+                                </p>
+                            </td>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    351.38 ns/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    248.00 B/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    3.00 allocs/op
+                                </p>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    ZapSugarStudioFormatPlain
+                                </p>
+                            </td>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    416.60 ns/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    312.00 B/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    5.00 allocs/op
+                                </p>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    ZapSugarStudioFormatJson
+                                </p>
+                            </td>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    417.70 ns/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    312.00 B/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    5.00 allocs/op
+                                </p>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    ZerologStudioFormatRaw
+                                </p>
+                            </td>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    3439.60 ns/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    4318.00 B/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    98.00 allocs/op
+                                </p>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    LogrusStudioFormatRaw
+                                </p>
+                            </td>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    3700.89 ns/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    1152.00 B/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    16.00 allocs/op
+                                </p>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    ZerologStudioFormatPlain
+                                </p>
+                            </td>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    3824.60 ns/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    4751.00 B/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    121.00 allocs/op
+                                </p>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    LogrusStudioFormatPlain
+                                </p>
+                            </td>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    5085.80 ns/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    1673.00 B/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    26.00 allocs/op
+                                </p>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    LogrusStudioFormatJson
+                                </p>
+                            </td>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    8961.67 ns/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    3006.50 B/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    47.00 allocs/op
+                                </p>
+                            </td>
+
+                        </tr>
+
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="py-8">
+            <div>
+                <h2 class="text-2xl font-semibold leading-tight">
+                    开启行号 附加字段 复杂字符串输出
+                </h2>
+            </div>
+            <div class="flex items-center text-xs text-gray-700">
+                <div class="mr-1">CallerEnabled/WithFields/MsgComplex</div>
+            </div>
+
+            <div class="-mx-4 sm:-mx-8 px-4 sm:px-8 py-4 overflow-x-auto">
+                <div
+                        class="inline-block min-w-full shadow rounded-lg overflow-hidden"
+                >
+                    <table class="min-w-full leading-normal">
+                        <thead>
+                        <tr>
+                            <th
+                                    class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider"
+                            >
+                                Library
+                            </th>
+
+                            <th
+                                    class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider"
+                            >
+                                Time
+                            </th>
+
+                            <th
+                                    class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider"
+                            >
+                                Bytes Allocated
+                            </th>
+                            <th
+                                    class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider"
+                            >
+                                Objects Allocated
+                            </th>
+                        </tr>
+                        </thead>
+                        <tbody>
+
+                        <tr>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    ZerologStudioFormatJson
+                                </p>
+                            </td>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    332.22 ns/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    296.00 B/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    3.00 allocs/op
+                                </p>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    ZapStudioFormatPlain
+                                </p>
+                            </td>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    375.22 ns/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    248.00 B/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    3.00 allocs/op
+                                </p>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    ZapStudioFormatJson
+                                </p>
+                            </td>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    381.00 ns/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    248.00 B/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    3.00 allocs/op
+                                </p>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    ZapSugarStudioFormatPlain
+                                </p>
+                            </td>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    443.20 ns/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    344.00 B/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    5.00 allocs/op
+                                </p>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    ZapSugarStudioFormatJson
+                                </p>
+                            </td>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    445.80 ns/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    344.00 B/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    5.00 allocs/op
+                                </p>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    ZerologStudioFormatRaw
+                                </p>
+                            </td>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    3604.40 ns/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    4462.00 B/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    99.00 allocs/op
+                                </p>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    LogrusStudioFormatRaw
+                                </p>
+                            </td>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    3694.80 ns/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    1185.00 B/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    16.00 allocs/op
+                                </p>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    ZerologStudioFormatPlain
+                                </p>
+                            </td>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    3956.75 ns/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    4895.00 B/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    122.00 allocs/op
+                                </p>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    LogrusStudioFormatPlain
+                                </p>
+                            </td>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    4944.33 ns/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    1705.00 B/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    26.00 allocs/op
+                                </p>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    LogrusStudioFormatJson
+                                </p>
+                            </td>
+
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    9010.12 ns/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    3038.50 B/op
+                                </p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900 whitespace-no-wrap">
+                                    47.00 allocs/op
+                                </p>
+                            </td>
+
+                        </tr>
+
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
 
     <script>
         var reports = JSON.parse("{\"B/op\":{\"labels\":[\"CallerEnabled/WithFields/MsgComplex-6\",\"CallerEnabled/WithFields/Msg-6\",\"CallerEnabled/WithFields/Formatting-6\",\"CallerEnabled/NoWithFields/MsgComplex-6\",\"CallerEnabled/NoWithFields/Msg-6\",\"CallerEnabled/NoWithFields/Formatting-6\",\"CallerDisabled/WithFields/MsgComplex-6\",\"CallerDisabled/WithFields/Msg-6\",\"CallerDisabled/WithFields/Formatting-6\",\"CallerDisabled/NoWithFields/MsgComplex-6\",\"CallerDisabled/NoWithFields/Msg-6\",\"CallerDisabled/NoWithFields/Formatting-6\"],\"datasets\":[{\"label\":\"ZerologStudioFormatRaw\",\"data\":[4462,4318,8061,2362,2218,5970,3982,3837,7579,1889,1745,5489]},{\"label\":\"ZerologStudioFormatPlain\",\"data\":[4895,4751,8494,2682,2538,6283,4222,4078,7833,2018,1873,5617]},{\"label\":\"ZerologStudioFormatJson\",\"data\":[296,296,1633,296,296,1633,0,0,1337,0,0,1337]},{\"label\":\"ZapSugarStudioFormatPlain\",\"data\":[344,312,1588,344,312,1588,96,64,1338,96,64,1338]},{\"label\":\"ZapSugarStudioFormatJson\",\"data\":[344,312,1588,344,312,1588,96,64,1338,96,64,1338]},{\"label\":\"ZapStudioFormatPlain\",\"data\":[248,248,1588,248,248,1588,0,0,1338,0,0,1338]},{\"label\":\"ZapStudioFormatJson\",\"data\":[248,248,1588,248,248,1588,0,0,1338,0,0,1338]},{\"label\":\"LogrusStudioFormatRaw\",\"data\":[1185,1152,3805,1040,848,4046.4,688,656,3309,544,352,3550.3]},{\"label\":\"LogrusStudioFormatPlain\",\"data\":[1705,1673,4710.4,1177,1113,3333.5,1161,1128,4166.299999999999,632,568,2789]},{\"label\":\"LogrusStudioFormatJson\",\"data\":[3038.5,3006.5,4771.6,2091,2059,3819,1578,1546,3307,1225,1193,2953]}]},\"allocs/op\":{\"labels\":[\"CallerEnabled/WithFields/MsgComplex-6\",\"CallerEnabled/WithFields/Msg-6\",\"CallerEnabled/WithFields/Formatting-6\",\"CallerEnabled/NoWithFields/MsgComplex-6\",\"CallerEnabled/NoWithFields/Msg-6\",\"CallerEnabled/NoWithFields/Formatting-6\",\"CallerDisabled/WithFields/MsgComplex-6\",\"CallerDisabled/WithFields/Msg-6\",\"CallerDisabled/WithFields/Formatting-6\",\"CallerDisabled/NoWithFields/MsgComplex-6\",\"CallerDisabled/NoWithFields/Msg-6\",\"CallerDisabled/NoWithFields/Formatting-6\"],\"datasets\":[{\"label\":\"ZerologStudioFormatRaw\",\"data\":[99,98,139,39,38,79,90,89,130,30,29,70]},{\"label\":\"ZerologStudioFormatPlain\",\"data\":[122,121,162,47,46,87,111,110,151,36,35,76]},{\"label\":\"ZerologStudioFormatJson\",\"data\":[3,3,43,3,3,43,0,0,40,0,0,40]},{\"label\":\"ZapSugarStudioFormatPlain\",\"data\":[5,5,43,5,5,43,2,2,40,2,2,40]},{\"label\":\"ZapSugarStudioFormatJson\",\"data\":[5,5,43,5,5,43,2,2,40,2,2,40]},{\"label\":\"ZapStudioFormatPlain\",\"data\":[3,3,43,3,3,43,0,0,40,0,0,40]},{\"label\":\"ZapStudioFormatJson\",\"data\":[3,3,43,3,3,43,0,0,40,0,0,40]},{\"label\":\"LogrusStudioFormatRaw\",\"data\":[16,16,56,11,10,50,13,13,53,8,7,47]},{\"label\":\"LogrusStudioFormatPlain\",\"data\":[26,26,66,16,16,55,21,21,61,11,11,50]},{\"label\":\"LogrusStudioFormatJson\",\"data\":[47,47,86,38,38,77,33,33,72,25,25,64]}]},\"ns/op\":{\"labels\":[\"CallerEnabled/WithFields/MsgComplex-6\",\"CallerEnabled/WithFields/Msg-6\",\"CallerEnabled/WithFields/Formatting-6\",\"CallerEnabled/NoWithFields/MsgComplex-6\",\"CallerEnabled/NoWithFields/Msg-6\",\"CallerEnabled/NoWithFields/Formatting-6\",\"CallerDisabled/WithFields/MsgComplex-6\",\"CallerDisabled/WithFields/Msg-6\",\"CallerDisabled/WithFields/Formatting-6\",\"CallerDisabled/NoWithFields/MsgComplex-6\",\"CallerDisabled/NoWithFields/Msg-6\",\"CallerDisabled/NoWithFields/Formatting-6\"],\"datasets\":[{\"label\":\"ZerologStudioFormatRaw\",\"data\":[3604.4,3439.6,5899.666666666667,1559.7,1461.5,3722.6,3102.625,2977.3333333333335,5424.444444444444,1102.5000000000002,1007.1111111111111,3250.8750000000005]},{\"label\":\"ZerologStudioFormatPlain\",\"data\":[3956.75,3824.6,6418.777777777777,1834,1729.777777777778,4110.444444444444,3355.8888888888887,3203.8,5648.222222222223,1288.2222222222224,1181.8000000000002,3414.1]},{\"label\":\"ZerologStudioFormatJson\",\"data\":[332.22222222222223,309.77777777777777,1609.4999999999998,325.8,308.2,1403.2222222222222,82.41,71.81,1169.4444444444443,80.82999999999998,69.62222222222222,1174.5555555555557]},{\"label\":\"ZapSugarStudioFormatPlain\",\"data\":[443.20000000000005,416.6,1724.1999999999998,448.29999999999995,415.4,1706.6000000000001,176.77777777777774,149.5,1425.3333333333333,179.8,146.55555555555554,1426.4]},{\"label\":\"ZapSugarStudioFormatJson\",\"data\":[445.8,417.70000000000005,1698,447.9,436.22222222222223,1696.3,177.99999999999997,151.33333333333337,1407.375,177.55555555555554,147.59999999999997,1415]},{\"label\":\"ZapStudioFormatPlain\",\"data\":[375.22222222222223,349,1835.2,371.2,343.625,1686.5555555555557,111.8625,98.97,1422.6999999999998,125.16666666666669,103.33,1425.4444444444443]},{\"label\":\"ZapStudioFormatJson\",\"data\":[381,351.375,2348.6000000000004,403,364.5,2259.4,163.1,123.80000000000001,1817.1000000000001,187.33333333333337,125.22222222222223,1618.7]},{\"label\":\"LogrusStudioFormatRaw\",\"data\":[3694.7999999999997,3700.8888888888887,9870.22222222222,2674.7,2542.1249999999995,8454.199999999999,1918.3999999999999,1931.0000000000002,7224.3,681.25,541.5,3358.625]},{\"label\":\"LogrusStudioFormatPlain\",\"data\":[4944.333333333333,5085.8,11160.6,3481.2000000000003,3378.3333333333335,9263,2887.2,2853.777777777778,8745.7,1132.5,1093.111111111111,3857.4999999999995]},{\"label\":\"LogrusStudioFormatJson\",\"data\":[9010.125,8961.666666666666,15754.5,6572.375,6495.375,13132.666666666666,4903.666666666668,4819.555555555556,11117.9,2944.3333333333335,2860.625,9023.7]}]}}");
